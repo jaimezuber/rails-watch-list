@@ -4,4 +4,5 @@ class Movie < ApplicationRecord
   validates :overview, presence: true
 
   has_many :bookmarks
+  has_many :list, through: :bookmarks
 end
