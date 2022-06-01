@@ -1,10 +1,15 @@
-<h1>All lists</h1>
-<ol>
-  <% @lists.each do |list| %>
-    <%= link_to list_path(list) do %>
-      <li><%= list.name %></li>
-    <% end %>
+<div class="top">
+  <h1>All lists</h1>
+  <%= link_to new_list_path do %>
+   <p class = "btn">Create new list</p>
   <% end %>
-</ol>
-
-<p><%= link_to "Create new list", new_list_path %></p>
+</div>
+<div class="content">
+  <ol>
+    <% @lists.each do |list| %>
+      <%= link_to list_path(list) do %>
+        <li><%= list.name %></li>
+      <% end %>
+    <% end %>
+  </ol>
+</div>
