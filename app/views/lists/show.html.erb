@@ -5,6 +5,7 @@
   <div>
     <%= movie.title %>
     <%= link_to "Delete", bookmark_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    <p><%= movie.comment %></p>
   </div>
 <% end %>
 
